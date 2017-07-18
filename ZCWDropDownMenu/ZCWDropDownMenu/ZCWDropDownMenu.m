@@ -113,7 +113,7 @@
     _meneNameTextColor = [UIColor lightGrayColor];
     _menuNameBackgroundColor = [UIColor whiteColor];
     _meneNameTextFont = ZCWDefaultFontSize;
-    _menuNameFrame = XYMenuNameDefaultFrame;
+    _menuNameFrame = ZCWMenuNameDefaultFrame;
     
     // 菜单展开与否指示
     _indicatorIconImage = [UIImage imageNamed:@"opinion_read"];
@@ -123,9 +123,9 @@
     _separationLineColor = [UIColor whiteColor];
     _separationLineInsets = UIEdgeInsetsZero;
     _meneItemTextColor = [UIColor lightGrayColor];
-    _menuItemBackgroundColor = XYMenuItemDefaultColor;
+    _menuItemBackgroundColor = ZCWMenuItemDefaultColor;
     _meneItemTextFont = ZCWDefaultFontSize;
-    _menuItemTextFrame = XYMenuItemTextDefaultFrame;
+    _menuItemTextFrame = ZCWMenuItemTextDefaultFrame;
     _menuItemHeight = 30;
 }
 
@@ -330,7 +330,7 @@
 - (void)clickToStartAction:(UIButton *)btn {
     btn.selected = !btn.selected;
     if (btn.selected) {
-        _backgroundView = [[UIView alloc] initWithFrame:CGRectMake(0, 0,XYScreenWidth , XYScreenHeight)];
+        _backgroundView = [[UIView alloc] initWithFrame:CGRectMake(0, 0,kScreenWidth , kScreenHeight)];
         // default color
         _backgroundView.backgroundColor = [UIColor clearColor];
         [self.superview insertSubview:_backgroundView atIndex:0];
@@ -395,7 +395,7 @@
 
 //高度
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return XYTableViewRowHeightDefaultHeight;
+    return ZCWTableViewRowHeightDefaultHeight;
 }
 
 // 区尾高度
